@@ -18,9 +18,13 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #444;
-  background-color: #fff6f0e0;
-  height: 100vh;
-  padding: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 240, 229),
+    rgb(255, 239, 239)
+  );
+  height: 100%;
+  padding-top: 2rem;
 }
 
 nav {
@@ -295,4 +299,28 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #5ec576;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.ending {
+  position: absolute;
+  /* width: 100vw; */
+  background-color: #37383d;
+  border-top: none;
+  border-bottom: 1px solid #444;
+  text-align: center;
+  opacity: 0;
+  padding: 1rem;
+  width: 100%;
 }

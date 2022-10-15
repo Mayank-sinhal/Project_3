@@ -62,6 +62,7 @@ const labelSumInterest = document.querySelector('.summary__value--interest');
 const labelTimer = document.querySelector('.timer');
 
 const containerApp = document.querySelector('.app');
+const logoutSec = document.querySelector('.ending');
 const containerMovements = document.querySelector('.movements');
 
 const btnLogin = document.querySelector('.login__btn');
@@ -197,6 +198,7 @@ const startLogOutTimer = function () {
       clearInterval(timer);
       labelWelcome.textContent = 'Log in to get started';
       containerApp.style.opacity = 0;
+      logoutSec.style.opacity = 0;
     }
 
     // Decrease 1s
@@ -237,6 +239,7 @@ btnLogin.addEventListener('click', function (e) {
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 100;
+    logoutSec.style.opacity = 100;
 
     // Create current date and time
     const now = new Date();
@@ -350,6 +353,7 @@ btnClose.addEventListener('click', function (e) {
     // Hide UI
     labelWelcome.textContent = 'Log in to get started';
     containerApp.style.opacity = 0;
+    logoutSec.style.opacity = 0;
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
@@ -360,4 +364,11 @@ btnSort.addEventListener('click', function (e) {
   e.preventDefault();
   displayMovements(currentAccount, !sorted);
   sorted = !sorted;
+});
+
+logoutSec.addEventListener('click', function (e) {
+  e.preventDefault();
+  labelWelcome.textContent = 'Log in to get started';
+  containerApp.style.opacity = 0;
+  logoutSec.style.opacity = 0;
 });
